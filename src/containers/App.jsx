@@ -8,7 +8,7 @@ import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 
-const Main = () => {
+const App = () => {
     return(
         <Main>
             <Sidebar>
@@ -24,4 +24,4 @@ const Main = () => {
     );
 }
 
-export default Main;
+export default App;
