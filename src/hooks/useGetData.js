@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const api = 'https://us-central1-joseph-dev-api.cloudfunctions.net/api';
+const api = 'http://localhost:1337/home';
 
 const useGetData = () => {
     const [myData, setData] = useState([]);
