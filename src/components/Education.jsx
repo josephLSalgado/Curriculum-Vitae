@@ -1,6 +1,7 @@
 import React from 'react';
 import H2Styled from '../styled/H2Styled';
 import H3Styled from '../styled/H3Styled';
+import H4Styled from '../styled/H4Styled';
 import PStyled from '../styled/PStyled';
 
 const Education = props => (
@@ -12,9 +13,9 @@ const Education = props => (
                     <H3Styled>
                         {edu.degree} @ {edu.institution}
                     </H3Styled>
-                    <h4>
+                    <H4Styled>
                         {edu.startDate} - {edu.endDate}
-                    </h4>
+                    </H4Styled>
                     <PStyled name={edu.description}/>
                 </div>
             ))}
