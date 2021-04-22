@@ -17,8 +17,8 @@ jobs:
           key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
           restore-keys: v1-npm-deps-
 
-      - name: Build
       - uses: actions/checkout@v2
+      - name: Build with node
         uses: actions/setup-node@v1
         with:
           node-version: '14.14.10'
