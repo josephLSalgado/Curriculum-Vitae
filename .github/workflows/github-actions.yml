@@ -1,0 +1,31 @@
+name: GitHub Actions Test
+
+on:
+  push:
+    branches: 
+      - develop
+
+jobs:
+  build:
+    name: Build y deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/cache@v2
+        with:
+          path: 
+            path: ~/.npm
+            key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: v1-npm-deps-
+
+      - name: Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.14.10'
+      - run: yarn build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: main
+          folder: /dist
