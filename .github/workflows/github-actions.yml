@@ -13,10 +13,9 @@ jobs:
     steps:
       - uses: actions/cache@v2
         with:
-          path: 
-            path: ~/.npm
-            key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
-            restore-keys: v1-npm-deps-
+          path: ~/.npm
+          key: v1-npm-deps-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: v1-npm-deps-
 
       - name: Build
         uses: actions/setup-node@v1
