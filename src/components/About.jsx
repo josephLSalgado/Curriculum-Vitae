@@ -56,7 +56,7 @@ const About = ({ address, avatar, bio, name, profession, social }) => (
         <div className="About-container">
             <AboutAvatar>
                 <figure>
-                    <AboutImg src={"http://localhost:1337"+avatar} alt={name}>
+                    <AboutImg src={avatar} alt={name}>
                     </AboutImg>
                 </figure>
             </AboutAvatar>
